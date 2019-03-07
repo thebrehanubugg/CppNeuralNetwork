@@ -59,7 +59,7 @@ brain.init(2, 3, 1, 0.3);
 vector<float> inputs = {0, 1};
 vector<float> answer = brain.predict(inputs);
 
-printVector(answer);  # [0.284652]
+printVector(answer);  /* [0.284652] */
 ```
 
 You could, instead of ``printVector(answer);`` do ``answer.print();`` *ONLY IF* you do ``return final_outputs;`` in the ``predict()`` method in the class.
