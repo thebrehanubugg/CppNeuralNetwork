@@ -53,13 +53,17 @@ The method ``(NeuralNetwork instance).predict(vector<float> inputs)`` expects a 
 ``return prediction`` returns the Network's guess! To see the output, do the following:
 
 ```c++
-NeuralNetwork brain;
-brain.init(2, 3, 1, 0.3);
+int main() {
+  NeuralNetwork brain;
+  brain.init(2, 3, 1, 0.3);
 
-vector<float> inputs = {0, 1};
-vector<float> answer = brain.predict(inputs);
+  vector<float> inputs = {0, 1};
+  vector<float> answer = brain.predict(inputs);
 
-printVector(answer);  /* [0.284652] */
+  printVector(answer);  /* [0.284652] */
+  
+  return 0;
+}
 ```
 
 You could, instead of ``printVector(answer);`` do ``answer.print();`` *ONLY IF* you do ``return final_outputs;`` in the ``predict()`` method in the class.
